@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday LY!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+            text-align: center;
+            color: #ff6b6b;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+            text-shadow: 2px 2px #ffccf9;
+        }
+        .message {
+            font-size: 1.5em;
+            margin: 20px;
+        }
+        .heart-container {
+            position: relative;
+            width: 100%;
+            margin: 20px auto;
+        }
+        .heart {
+            display: inline-block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background-color: #ff6b6b;
+            transform: rotate(45deg);
+            margin: 5px;
+        }
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #ff6b6b;
+            border-radius: 50%;
+        }
+        .heart:before {
+            top: -25px;
+            left: 0;
+        }
+        .heart:after {
+            top: 0;
+            left: -25px;
+        }
+        .balloons {
+            margin: 20px 0;
+        }
+        .balloon {
+            display: inline-block;
+            width: 60px;
+            height: 80px;
+            background-color: #ffe066;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        .balloon:nth-child(2) {
+            background-color: #74b9ff;
+            animation-delay: 1s;
+        }
+        .balloon:nth-child(3) {
+            background-color: #ff7675;
+            animation-delay: 2s;
+        }
+        .balloon:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background-color: #333;
+            transform: translateX(-50%);
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .card {
+            display: inline-block;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.1);
+        }
+        .hidden-message {
+            display: none;
+            font-size: 1.2em;
+            color: #6c5ce7;
+            margin-top: 20px;
+        }
+        .hidden-image {
+            display: none;
+            margin-top: 20px;
+        }
+        .hidden-image img {
+            max-width: 20%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, LY! 🎉</h1>
+    <p class="message">Wishing you a day filled with love, laughter, and endless joy!</p>
+
+    <div class="heart-container">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <div class="card" onclick="revealMessage()">
+        🎁 Click to reveal your surprise!
+    </div>
+
+    <div class="hidden-message" id="hiddenMessage">
+        💖 LY, I wish you all the happiness, love, and success in the world. May this year bring you endless joy and exciting opportunities. I also know you’re going to rock your exams this year—because you’re smart, hardworking, and unstoppable! 🎓✨
+
+        Have the most wonderful birthday ever, sis. You deserve all the best things in life!
+        
+        With all and support,
+        [Reaksa]
+        
+         💖
+    </div>
+
+    <div class="hidden-image" id="hiddenImage">
+        <img src="/reaksa.jpg" alt="sa's Photo">
+    </div>
+
+    <script>
+        function revealMessage() {
+            const message = document.getElementById('hiddenMessage');
+            const image = document.getElementById('hiddenImage');
+            message.style.display = 'block';
+            image.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
